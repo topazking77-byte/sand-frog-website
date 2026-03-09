@@ -1,7 +1,7 @@
 import { motion } from 'motion/react';
 import { Star, ShieldCheck, Clock, ArrowRight } from 'lucide-react';
 
-export default function Hero() {
+export default function Hero({ onOpenSchedule, onOpenQuote }: { onOpenSchedule: () => void, onOpenQuote: () => void }) {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
@@ -50,6 +50,7 @@ export default function Hero() {
 
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
             <motion.button
+              onClick={onOpenSchedule}
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-emerald-500 hover:bg-emerald-600 text-white px-8 py-4 rounded-full font-bold text-lg shadow-xl shadow-emerald-500/20 flex items-center justify-center gap-2 group"
@@ -58,6 +59,7 @@ export default function Hero() {
               <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </motion.button>
             <motion.button
+              onClick={onOpenQuote}
               whileHover={{ scale: 1.05, backgroundColor: "rgba(255,255,255,0.1)" }}
               whileTap={{ scale: 0.95 }}
               className="bg-transparent border border-white/30 text-white px-8 py-4 rounded-full font-bold text-lg hover:bg-white/5 transition-colors flex items-center justify-center"

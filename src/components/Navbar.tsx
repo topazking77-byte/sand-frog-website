@@ -2,7 +2,7 @@ import { useState, useEffect } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'motion/react';
 import { Phone, Menu, X } from 'lucide-react';
 
-export default function Navbar() {
+export default function Navbar({ onOpenSchedule }: { onOpenSchedule: () => void }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const { scrollY } = useScroll();
@@ -60,6 +60,7 @@ export default function Navbar() {
             <span>(480) 788-3730</span>
           </a>
           <motion.button
+            onClick={onOpenSchedule}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
             className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-emerald-500/30 transition-all"
@@ -100,7 +101,13 @@ export default function Navbar() {
             <Phone className="w-4 h-4 text-emerald-500" />
             (480) 788-3730
           </a>
-          <button className="w-full bg-emerald-500 text-white py-3 rounded-xl font-semibold shadow-lg shadow-emerald-500/30">
+          <button
+            onClick={() => {
+              setIsMobileMenuOpen(false);
+              onOpenSchedule();
+            }}
+            className="w-full bg-emerald-500 text-white py-3 rounded-xl font-semibold shadow-lg shadow-emerald-500/30"
+          >
             Schedule Now
           </button>
         </motion.div>

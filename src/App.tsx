@@ -6,13 +6,18 @@ import Services from './components/Services';
 import WhyChooseUs from './components/WhyChooseUs';
 import Testimonials from './components/Testimonials';
 import Footer from './components/Footer';
+import ScheduleModal from './components/ScheduleModal';
+import QuoteModal from './components/QuoteModal';
+import { useState } from 'react';
 
 export default function App() {
+  const [isScheduleOpen, setIsScheduleOpen] = useState(false);
+  const [isQuoteOpen, setIsQuoteOpen] = useState(false);
   return (
     <div className="font-sans antialiased text-slate-900 bg-white selection:bg-emerald-200 selection:text-emerald-900">
-      <Navbar />
+      <Navbar onOpenSchedule={() => setIsScheduleOpen(true)} />
       <main>
-        <Hero />
+        <Hero onOpenSchedule={() => setIsScheduleOpen(true)} onOpenQuote={() => setIsQuoteOpen(true)} />
         <Features />
         <WhyChooseUs />
         <Services />
@@ -35,6 +40,7 @@ export default function App() {
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-6">
               <motion.button
+                onClick={() => setIsScheduleOpen(true)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
                 className="bg-white text-emerald-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all"
@@ -55,6 +61,15 @@ export default function App() {
         <Testimonials />
       </main>
       <Footer />
+
+      <ScheduleModal
+        isOpen={isScheduleOpen}
+        onClose={() => setIsScheduleOpen(false)}
+      />
+      <QuoteModal
+        isOpen={isQuoteOpen}
+        onClose={() => setIsQuoteOpen(false)}
+      />
     </div>
   );
 }
