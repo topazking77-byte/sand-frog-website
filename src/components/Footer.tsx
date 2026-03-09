@@ -75,13 +75,13 @@ export default function Footer() {
               <li className="flex items-start gap-4">
                 <Clock className="w-6 h-6 text-emerald-500 shrink-0 mt-1" />
                 <div className="flex flex-col gap-1">
-                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Monday</span><span>Open 24 hours</span></div>
-                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Tuesday</span><span>Open 24 hours</span></div>
-                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Wednesday</span><span>Open 24 hours</span></div>
-                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Thursday</span><span>Open 24 hours</span></div>
-                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Friday</span><span>Open 24 hours</span></div>
-                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Saturday</span><span>Open 24 hours</span></div>
-                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Sunday</span><span>Open 24 hours</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Monday</span><span>5:00 AM - 5:00 PM</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Tuesday</span><span>5:00 AM - 5:00 PM</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Wednesday</span><span>5:00 AM - 5:00 PM</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Thursday</span><span>5:00 AM - 5:00 PM</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Friday</span><span>5:00 AM - 5:00 PM</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Saturday</span><span>Closed</span></div>
+                  <div className="flex justify-between w-48"><span className="font-semibold text-white">Sunday</span><span>Closed</span></div>
                 </div>
               </li>
             </ul>
