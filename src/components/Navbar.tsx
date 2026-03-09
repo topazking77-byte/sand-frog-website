@@ -29,10 +29,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 flex items-center justify-between">
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
-          <div className="relative w-10 h-10 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:shadow-emerald-500/50 transition-all duration-300">
-            SF
-            <div className="absolute inset-0 bg-white/20 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity" />
-          </div>
+          <img src="/brand-logo.png" alt="Sand Frog Air Logo" className="w-12 h-12 object-contain rounded-full bg-white/10 p-1" />
           <span className={`font-display font-bold text-2xl tracking-tight ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
             Sand Frog<span className="text-emerald-500">HVAC</span>
           </span>

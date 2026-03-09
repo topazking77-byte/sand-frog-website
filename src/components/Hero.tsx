@@ -6,11 +6,11 @@ export default function Hero() {
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/hero-bg.png"
-          alt="Beautiful home exterior"
-          className="w-full h-full object-cover"
-        />
+        <div className="absolute inset-0 grid grid-cols-2 md:grid-cols-3">
+          <img src="/hero-1.png" alt="Modern HVAC Unit" className="w-full h-full object-cover" />
+          <img src="/hero-2.png" alt="HVAC Technician Working" className="w-full h-full object-cover" />
+          <img src="/hero-3.png" alt="Smart Thermostat" className="w-full h-full object-cover hidden md:block" />
+        </div>
         <div className="absolute inset-0 bg-slate-900/60 mix-blend-multiply" />
         <div className="absolute inset-0 bg-gradient-to-r from-slate-900/95 via-slate-900/60 to-transparent" />
 
