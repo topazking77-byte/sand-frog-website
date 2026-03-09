@@ -14,7 +14,7 @@ export default function App() {
   const [isScheduleOpen, setIsScheduleOpen] = useState(false);
   const [isQuoteOpen, setIsQuoteOpen] = useState(false);
   return (
-    <div className="font-sans antialiased text-slate-900 bg-white selection:bg-emerald-200 selection:text-emerald-900">
+    <div className="font-sans antialiased text-black bg-white selection:bg-yellow-200 selection:text-yellow-900">
       <Navbar onOpenSchedule={() => setIsScheduleOpen(true)} />
       <main>
         <Hero onOpenSchedule={() => setIsScheduleOpen(true)} onOpenQuote={() => setIsQuoteOpen(true)} />
@@ -23,7 +23,7 @@ export default function App() {
         <Services />
 
         {/* CTA Section */}
-        <section className="py-24 bg-emerald-600 relative overflow-hidden">
+        <section className="py-24 bg-yellow-600 relative overflow-hidden">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10" />
           <div className="container mx-auto px-6 relative z-10 text-center">
             <motion.h2
@@ -34,7 +34,7 @@ export default function App() {
             >
               Ready to Feel the Difference?
             </motion.h2>
-            <p className="text-xl text-emerald-100 mb-12 max-w-2xl mx-auto">
+            <p className="text-xl text-yellow-100 mb-12 max-w-2xl mx-auto">
               Schedule your service today and get $50 off your first repair.
               Don't let the heat win.
             </p>
@@ -43,7 +43,7 @@ export default function App() {
                 onClick={() => setIsScheduleOpen(true)}
                 whileHover={{ scale: 1.05 }}
                 whileTap={{ scale: 0.95 }}
-                className="bg-white text-emerald-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all"
+                className="bg-white text-yellow-600 px-10 py-4 rounded-full font-bold text-lg shadow-xl hover:shadow-2xl transition-all"
               >
                 Schedule Now
               </motion.button>

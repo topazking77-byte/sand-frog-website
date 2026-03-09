@@ -55,13 +55,13 @@ export default function Services() {
       <div className="container mx-auto px-6">
         <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
           <div className="max-w-2xl">
-            <span className="text-emerald-500 font-bold tracking-wider uppercase text-sm mb-2 block">Our Expertise</span>
-            <h2 className="font-display font-bold text-4xl md:text-5xl text-slate-900 leading-tight">
+            <span className="text-yellow-500 font-bold tracking-wider uppercase text-sm mb-2 block">Our Expertise</span>
+            <h2 className="font-display font-bold text-4xl md:text-5xl text-black leading-tight">
               Comprehensive Climate Solutions for Your Home
             </h2>
           </div>
-          <button className="hidden md:flex items-center gap-2 text-emerald-600 font-bold hover:text-emerald-700 transition-colors group">
-            View All Services <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+          <button className="hidden md:flex items-center gap-2 text-yellow-600 font-bold hover:text-yellow-700 transition-colors group">
+            View All Services <ArrowRight className="w-5 h-5 group-hover:tranzinc-x-1 transition-transform" />
           </button>
         </div>
 
@@ -81,17 +81,17 @@ export default function Services() {
                 alt={service.title}
                 className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-slate-900/90 via-slate-900/40 to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/90 via-zinc-900/40 to-transparent" />
 
-              <div className="absolute bottom-0 left-0 right-0 p-8 transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300">
+              <div className="absolute bottom-0 left-0 right-0 p-8 transform tranzinc-y-4 group-hover:tranzinc-y-0 transition-transform duration-300">
                 <div className="w-12 h-12 bg-white/10 backdrop-blur-md rounded-xl flex items-center justify-center mb-4 text-white border border-white/20">
                   <service.icon className="w-6 h-6" />
                 </div>
                 <h3 className="text-white font-bold text-2xl mb-2">{service.title}</h3>
-                <p className="text-slate-300 mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
+                <p className="text-zinc-300 mb-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-100">
                   {service.description}
                 </p>
-                <div className="flex items-center gap-2 text-emerald-400 font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
+                <div className="flex items-center gap-2 text-yellow-400 font-bold text-sm opacity-0 group-hover:opacity-100 transition-opacity duration-300 delay-200">
                   Learn More <ArrowRight className="w-4 h-4" />
                 </div>
               </div>
@@ -100,7 +100,7 @@ export default function Services() {
         </div>
 
         <div className="mt-12 text-center md:hidden">
-          <button className="inline-flex items-center gap-2 text-emerald-600 font-bold hover:text-emerald-700 transition-colors">
+          <button className="inline-flex items-center gap-2 text-yellow-600 font-bold hover:text-yellow-700 transition-colors">
             View All Services <ArrowRight className="w-5 h-5" />
           </button>
         </div>
@@ -112,7 +112,7 @@ export default function Services() {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
-            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-sm"
+            className="fixed inset-0 z-[100] flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm"
             onClick={() => setSelectedService(null)}
           >
             <motion.div
@@ -124,26 +124,26 @@ export default function Services() {
             >
               <button
                 onClick={() => setSelectedService(null)}
-                className="absolute top-6 right-6 p-2 rounded-full hover:bg-slate-100 text-slate-500 transition-colors"
+                className="absolute top-6 right-6 p-2 rounded-full hover:bg-zinc-100 text-zinc-500 transition-colors"
                 aria-label="Close modal"
               >
                 <X className="w-6 h-6" />
               </button>
 
-              <div className="w-16 h-16 bg-emerald-100 rounded-2xl flex items-center justify-center text-emerald-600 mb-6">
+              <div className="w-16 h-16 bg-yellow-100 rounded-2xl flex items-center justify-center text-yellow-600 mb-6">
                 <selectedService.icon className="w-8 h-8" />
               </div>
 
-              <h3 className="font-display font-bold text-3xl text-slate-900 mb-4">
+              <h3 className="font-display font-bold text-3xl text-black mb-4">
                 {selectedService.title}
               </h3>
 
-              <div className="space-y-4 text-slate-600 leading-relaxed">
-                <p className="font-medium text-slate-900">
+              <div className="space-y-4 text-zinc-600 leading-relaxed">
+                <p className="font-medium text-black">
                   {selectedService.description}
                 </p>
-                <div className="h-px bg-slate-100 my-4" />
-                <h4 className="font-bold text-emerald-600 text-sm uppercase tracking-wider mb-2">Verified Facts</h4>
+                <div className="h-px bg-zinc-100 my-4" />
+                <h4 className="font-bold text-yellow-600 text-sm uppercase tracking-wider mb-2">Verified Facts</h4>
                 <p>
                   {selectedService.details}
                 </p>
@@ -153,7 +153,7 @@ export default function Services() {
                 <a
                   href="#contact"
                   onClick={() => setSelectedService(null)}
-                  className="w-full inline-flex items-center justify-center bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-4 px-8 rounded-xl transition-colors shadow-lg shadow-emerald-200"
+                  className="w-full inline-flex items-center justify-center bg-yellow-600 hover:bg-yellow-700 text-white font-bold py-4 px-8 rounded-xl transition-colors shadow-lg shadow-yellow-200"
                 >
                   Schedule this Service
                 </a>

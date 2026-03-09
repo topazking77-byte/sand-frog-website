@@ -30,8 +30,8 @@ export default function Navbar({ onOpenSchedule }: { onOpenSchedule: () => void 
         {/* Logo */}
         <a href="#" className="flex items-center gap-2 group">
           <img src="/brand-logo.png" alt="Sand Frog Air Logo" className="w-12 h-12 object-contain rounded-full bg-white/10 p-1" />
-          <span className={`font-display font-bold text-2xl tracking-tight ${isScrolled ? 'text-slate-900' : 'text-white'}`}>
-            Sand Frog<span className="text-emerald-500">HVAC</span>
+          <span className={`font-display font-bold text-2xl tracking-tight ${isScrolled ? 'text-black' : 'text-white'}`}>
+            Sand Frog<span className="text-yellow-500">HVAC</span>
           </span>
         </a>
 
@@ -41,7 +41,7 @@ export default function Navbar({ onOpenSchedule }: { onOpenSchedule: () => void 
             <a
               key={link.name}
               href={link.href}
-              className={`text-sm font-medium transition-colors hover:text-emerald-500 ${isScrolled ? 'text-slate-600' : 'text-slate-200'
+              className={`text-sm font-medium transition-colors hover:text-yellow-500 ${isScrolled ? 'text-zinc-600' : 'text-zinc-200'
                 }`}
             >
               {link.name}
@@ -53,17 +53,17 @@ export default function Navbar({ onOpenSchedule }: { onOpenSchedule: () => void 
         <div className="hidden md:flex items-center gap-6">
           <a
             href="tel:+14807883730"
-            className={`flex items-center gap-2 font-semibold transition-colors ${isScrolled ? 'text-slate-900' : 'text-white'
+            className={`flex items-center gap-2 font-semibold transition-colors ${isScrolled ? 'text-black' : 'text-white'
               }`}
           >
-            <Phone className="w-4 h-4 text-emerald-500" />
+            <Phone className="w-4 h-4 text-yellow-500" />
             <span>(480) 788-3730</span>
           </a>
           <motion.button
             onClick={onOpenSchedule}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="bg-emerald-500 hover:bg-emerald-600 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-emerald-500/30 transition-all"
+            className="bg-yellow-500 hover:bg-yellow-600 text-white px-6 py-2.5 rounded-full font-semibold shadow-lg shadow-yellow-500/30 transition-all"
           >
             Schedule Now
           </motion.button>
@@ -71,10 +71,10 @@ export default function Navbar({ onOpenSchedule }: { onOpenSchedule: () => void 
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden p-2 text-slate-400 hover:text-white transition-colors"
+          className="md:hidden p-2 text-zinc-400 hover:text-white transition-colors"
           onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
         >
-          {isMobileMenuOpen ? <X className={isScrolled ? "text-slate-900" : "text-white"} /> : <Menu className={isScrolled ? "text-slate-900" : "text-white"} />}
+          {isMobileMenuOpen ? <X className={isScrolled ? "text-black" : "text-white"} /> : <Menu className={isScrolled ? "text-black" : "text-white"} />}
         </button>
       </div>
 
@@ -84,21 +84,21 @@ export default function Navbar({ onOpenSchedule }: { onOpenSchedule: () => void 
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -20 }}
-          className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-slate-100 p-6 md:hidden flex flex-col gap-4"
+          className="absolute top-full left-0 right-0 bg-white shadow-xl border-t border-zinc-100 p-6 md:hidden flex flex-col gap-4"
         >
           {navLinks.map((link) => (
             <a
               key={link.name}
               href={link.href}
-              className="text-slate-600 font-medium py-2 hover:text-emerald-500"
+              className="text-zinc-600 font-medium py-2 hover:text-yellow-500"
               onClick={() => setIsMobileMenuOpen(false)}
             >
               {link.name}
             </a>
           ))}
-          <div className="h-px bg-slate-100 my-2" />
-          <a href="tel:+14807883730" className="flex items-center gap-2 font-semibold text-slate-900 py-2">
-            <Phone className="w-4 h-4 text-emerald-500" />
+          <div className="h-px bg-zinc-100 my-2" />
+          <a href="tel:+14807883730" className="flex items-center gap-2 font-semibold text-black py-2">
+            <Phone className="w-4 h-4 text-yellow-500" />
             (480) 788-3730
           </a>
           <button
@@ -106,7 +106,7 @@ export default function Navbar({ onOpenSchedule }: { onOpenSchedule: () => void 
               setIsMobileMenuOpen(false);
               onOpenSchedule();
             }}
-            className="w-full bg-emerald-500 text-white py-3 rounded-xl font-semibold shadow-lg shadow-emerald-500/30"
+            className="w-full bg-yellow-500 text-white py-3 rounded-xl font-semibold shadow-lg shadow-yellow-500/30"
           >
             Schedule Now
           </button>
